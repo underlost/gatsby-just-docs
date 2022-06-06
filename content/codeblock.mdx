@@ -1,0 +1,45 @@
+---
+title: "Syntax Highlighting"
+metaTitle: "Syntax Highlighting is the meta title tag for this page"
+metaDescription: "Gatsby Just Docs uses PrismJS for easy code highlighting"
+nav_order: 2
+show_toc: false
+---
+
+## Basics
+
+The following is a code block with JavaScript language syntax highlighting:
+
+```javascript
+import React from 'react';
+```
+
+## Supports Multiple Languages
+
+The following are a list of languages automatically supported with out any additional configuration:
+
+markup, bash, clike, c, cpp, css, javascript, jsx, coffeescript, actionscript, css-extr, diff, git, go, graphql, handlebars, json, less, makefile, markdown, objectivec, ocaml, python, reason, sass, scss, sql, stylus, tsx, typescript, wasm, yaml
+
+To add additional languages, refer to the comments within `src/custom/config/codeBlockLanguages.js` to add additional languages.
+
+
+## Diff Highlighting
+
+The following is a code block with diff. Lines with `+` highlighted in green shade indicating an addition. Lines with `-` highlighted in red shade indicating a deletion.
+
+```javascript
+- const data = ['1','2'];
++ const data = [1,2];
+```
+
+## Live Editing example
+
+Gatsby Just Docs supports live code editing examples. Edit the HTML below to see the button change in real-time.
+
+```javascript react-live=true
+<button className={'btn btn-default'}>Change my text</button>
+```
+
+## Styling
+
+For ways to use the styling in the markdown refer to the [UI Components](/ui-components/code/) section.

@@ -33,7 +33,7 @@ const config = {
   },
   siteMetadata: {
     title: 'Gatsby Just Docs',
-    description: 'Documentation built with mdx. Powering docs.boredable.com ',
+    description: 'Documentation built with MDX. Powering docs.boredable.com ',
     ogImage: null,
     docsLocation: 'https://github.com/underlost/gatsby-just-the-docs/tree/master/content',
     favicon: 'https://graphql-engine-cdn.hasura.io/img/hasura_icon_black.svg',
