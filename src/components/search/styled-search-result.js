@@ -15,6 +15,7 @@ const Popover = css`
   box-shadow: 0 0 5px 0;
   padding: 1em;
   border-radius: 2px;
+  background-color: white;
   background: ${({ theme }) => theme.background};
 `;
 

@@ -26,7 +26,6 @@ const LoadableComponent = Loadable({
   loading: LoadingProvider,
 });
 
-/* eslint-disable react/jsx-key */
 const CodeBlock = ({ children: exampleCode, ...props }) => {
   const [_, updateView] = React.useState(0);
 
@@ -44,9 +43,9 @@ const CodeBlock = ({ children: exampleCode, ...props }) => {
     return <LoadableComponent code={exampleCode} />;
   } else {
     return (
-      <Highlight {...defaultProps} Prism={Prism} code={exampleCode} language={(props.className)?props.className.split("-")[1] :"javascript"} theme={theme}>
+      <Highlight {...defaultProps} theme={theme} code={exampleCode} language={(props.className)?props.className.split("-")[1] :"javascript"} >
         {({ className, style, tokens, getLineProps, getTokenProps }) => (
-          <pre className={className + ' pre'} style={style} p={3}>
+          <pre className={className} style={style} p={3}>
             {cleanTokens(tokens).map((line, i) => {
               let lineClass = {};
 

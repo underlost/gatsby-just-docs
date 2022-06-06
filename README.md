@@ -1,4 +1,4 @@
-# gatsby-justdocs
+# Gatsby Just Docs
 
 A remake of Just the Docs, but for Gatsby, and supports MDX. 
 

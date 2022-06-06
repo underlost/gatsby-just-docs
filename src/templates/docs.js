@@ -6,6 +6,7 @@ import MDXRenderer from 'gatsby-plugin-mdx/mdx-renderer';
 import { Layout, Link } from '$components';
 import NextPrevious from '../components/NextPrevious';
 import config from '../../config';
+import TableOfContents from '../components/TableOfContents';
 
 const forcedNavOrder = config.sidebar.forcedNavOrder;
 
@@ -67,6 +68,8 @@ export default class MDXRuntimeTest extends Component {
 
     const metaDescription = mdx.frontmatter.metaDescription;
 
+    const show_toc = mdx.frontmatter.show_toc;
+
     let canonicalUrl = config.gatsby.siteUrl;
 
     canonicalUrl =
@@ -89,7 +92,6 @@ export default class MDXRuntimeTest extends Component {
         </Helmet>
 
         <div id="main-content" className="main-content" role="main">
-
           <h1 id={mdx.fields.slug}>
             {' '}
             <a href={`#${mdx.fields.slug}`} className="anchor-heading" aria-labelledby="labels">
@@ -100,9 +102,9 @@ export default class MDXRuntimeTest extends Component {
             {mdx.fields.title}
           </h1>
 
-          {metaDescription ? (
-            <p className='fs-6 fw-300'>{metaDescription}</p>
-          ) : null}
+          {metaDescription ? <p className="fs-6 fw-300">{metaDescription}</p> : null}
+
+          {show_toc == false ? null : <TableOfContents location={this.props.location} /> }
 
           <MDXRenderer>{mdx.body}</MDXRenderer>
 
@@ -148,7 +150,7 @@ export default class MDXRuntimeTest extends Component {
 }
 
 export const pageQuery = graphql`
-  query($id: String!) {
+  query ($id: String!) {
     site {
       siteMetadata {
         title
@@ -171,6 +173,7 @@ export const pageQuery = graphql`
       frontmatter {
         metaTitle
         metaDescription
+        show_toc
       }
     }
     allMdx {

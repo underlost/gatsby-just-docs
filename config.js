@@ -24,25 +24,25 @@ const config = {
     },
   },
   sidebar: {
-    forcedNavOrder: [ ],
-    collapsedNav: [ ],
+    forcedNavOrder: [],
+    collapsedNav: [],
     links: [{ text: 'underlost', link: 'https://underlost.net' }],
     frontline: false,
     ignoreIndex: false,
-    title: 'gatsby Docs',
+    title: 'gatsby Just Docs',
   },
   siteMetadata: {
-    title: 'Gatsby Just The Docs',
+    title: 'Gatsby Just Docs',
     description: 'Documentation built with mdx. Powering docs.boredable.com ',
     ogImage: null,
-    docsLocation: 'https://github.com/hasura/gatsby-gitbook-boilerplate/tree/master/content',
+    docsLocation: 'https://github.com/underlost/gatsby-just-the-docs/tree/master/content',
     favicon: 'https://graphql-engine-cdn.hasura.io/img/hasura_icon_black.svg',
   },
   pwa: {
     enabled: false, // disabling this will also remove the existing service worker.
     manifest: {
-      name: 'Gatsby Just The Docs',
-      short_name: 'gatsbyjustthedocs',
+      name: 'Gatsby Just Docs',
+      short_name: 'gatsbyjustdocs',
       start_url: '/',
       background_color: '#6b37bf',
       theme_color: '#6b37bf',

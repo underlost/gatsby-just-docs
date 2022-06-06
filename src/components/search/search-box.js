@@ -14,8 +14,8 @@ export default connectSearchBox(
           value={currentRefinement}
           onFocus={onFocus}
         />
-        <label for="search-input" class="search-label">
-          <svg height="24" width="24" viewBox="0 0 24 24" class="search-icon">
+        <label htmlFor="search-input" className="search-label">
+          <svg height="24" width="24" viewBox="0 0 24 24" className="search-icon">
             <use xlinkHref="#svg-search"></use>
           </svg>
         </label>

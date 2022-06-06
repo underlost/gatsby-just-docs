@@ -1,4 +1,5 @@
 require("dotenv").config();
+
 const queries = require("./src/utils/algolia");
 const config = require("./config");
 const plugins = [
@@ -45,6 +46,10 @@ const plugins = [
           resolve: 'gatsby-remark-copy-linked-files',
         },
       ],
+      remarkPlugins: [],
+      // remarkPlugins: [require('remark-css-selectors')],
+      commonmark: true,
+
       extensions: ['.mdx', '.md'],
     },
   },

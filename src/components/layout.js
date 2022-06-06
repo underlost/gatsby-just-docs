@@ -4,7 +4,6 @@ import { MDXProvider } from '@mdx-js/react';
 import ThemeProvider from './theme/themeProvider';
 import mdxComponents from './mdxComponents';
 import Sidebar from './sidebar';
-import RightSidebar from './rightSidebar';
 import config from '../../config.js';
 import Header from './Header';
 import SvgElements from './svgElements';
@@ -17,7 +16,9 @@ const Layout = ({ children, location }) => (
         <div className="side-bar">
           {config.sidebar.title ? (
             <div className="site-header">
-              <a href="/" className="site-title lh-tight">{config.sidebar.title}</a>
+              <a href="/" className="site-title lh-tight">
+                {config.sidebar.title}
+              </a>
             </div>
           ) : null}
 
@@ -26,7 +27,7 @@ const Layout = ({ children, location }) => (
           <footer className="site-footer">
             {' '}
             This site uses{' '}
-            <a href="https://github.com/underlost/gatsby-just-the-docs">Gatsby Just the Docs</a>, a
+            <a href="https://github.com/underlost/gatsby-just-docs">Gatsby Just Docs</a>, a
             documentation theme for Gatsby.
           </footer>
         </div>

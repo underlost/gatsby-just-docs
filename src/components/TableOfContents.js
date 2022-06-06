@@ -3,9 +3,9 @@ import { StaticQuery, graphql } from 'gatsby';
 
 // import Link from './link';
 import config from '../../config';
-import { Sidebar, ListItem } from './styles/Sidebar';
+import { ListItem } from './styles/Sidebar';
 
-const SidebarLayout = ({ location }) => (
+const TableOfContents = ({ location }) => (
   <StaticQuery
     query={graphql`
       query {
@@ -58,22 +58,14 @@ const SidebarLayout = ({ location }) => (
 
       if (finalNavItems && finalNavItems.length) {
         return (
-          <Sidebar>
-            <ul className={'rightSideBarUL'}>
-              <li className={'rightSideTitle'}>CONTENTS</li>
-              {finalNavItems}
-            </ul>
-          </Sidebar>
-        );
-      } else {
-        return (
-          <Sidebar>
-            <ul></ul>
-          </Sidebar>
+          <nav>
+            <h2 className="no_toc text-delta">Table of contents</h2>
+            <ul className={'rightSideBarUL'}>{finalNavItems}</ul>
+          </nav>
         );
       }
     }}
   />
 );
 
-export default SidebarLayout;
+export default TableOfContents;
