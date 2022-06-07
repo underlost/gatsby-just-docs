@@ -1,6 +1,8 @@
 import styled from '@emotion/styled';
+import { Link as GatsbyLink } from 'gatsby';
 
 export const ListItem = styled(({ className, active, level, ...props }) => {
+  
   return (
     <li className={className}>
       <a href={props.to} {...props}>

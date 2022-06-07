@@ -7,6 +7,7 @@ import Sidebar from './sidebar';
 import config from '../../config.js';
 import Header from './Header';
 import SvgElements from './svgElements';
+import { ListItem } from './styles/Sidebar';
 
 const Layout = ({ children, location }) => {
 
@@ -50,6 +51,30 @@ const Layout = ({ children, location }) => {
               className={`site-nav ${menuState}`}
             >
               <Sidebar location={location} />
+
+              <ul>
+                {config.sidebar.links && config.sidebar.links.length > 0 && <hr />}
+                {config.sidebar.links.map((link, key) => {
+                  if (link.link !== '' && link.text !== '') {
+                    return (
+                      <ListItem key={key} to={link.link}>
+                        {link.text}
+                        <span className="nav-list-expander" style={{
+                          display: `block`,
+                          height: `16px`,
+                          width: `16px`,
+                          float: `right`,
+                          paddingTop: `4px`,
+                        }}>
+                          <svg height="16" width="16" viewBox="0 0 16 16">
+                            <use xlinkHref="#svg-doc"></use>
+                          </svg>
+                        </span>
+                      </ListItem>
+                    );
+                  }
+                })}
+              </ul>
             </nav>
 
             <footer className="site-footer">

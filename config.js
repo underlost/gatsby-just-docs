@@ -9,6 +9,7 @@ const config = {
     logo: 'https://graphql-engine-cdn.hasura.io/learn-hasura/assets/homepage/brand.svg',
     logoLink: '/',
     title: 'Gatsby Just Docs',
+    tweetText: 'Gatsby Just Docs',
     search: {
       enabled: true,
       indexName: 'docs_boredable',
@@ -20,7 +21,7 @@ const config = {
   sidebar: {
     forcedNavOrder: [],
     collapsedNav: [],
-    links: [{ text: 'underlost', link: 'https://underlost.net' }],
+    links: [{ text: 'Visit underlost.net', link: 'https://underlost.net' }],
     frontline: false,
     ignoreIndex: false,
   },
