@@ -2,6 +2,8 @@ import * as React from 'react';
 
 import CodeBlock from './codeBlock';
 import AnchorTag from './anchor';
+import Button from './Button';
+import CodeExample from './CodeExample'
 
 const appendString = (children) => {
   if (Array.isArray(children)) {
@@ -65,7 +67,8 @@ export default {
   p: (props) => <p className="paragraph" {...props} />,
   code: CodeBlock,
   a: AnchorTag,
-  
+  Button: Button,
+  CodeExample: CodeExample,
   // TODO add `img`
   // TODO add `blockquote`
   // TODO add `ul`

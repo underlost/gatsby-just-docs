@@ -82,21 +82,21 @@
     }
   }
 
-  .task-list {
+  .task-list,
+  .contains-task-list {
     padding-left: 0;
   }
 
   .task-list-item {
     display: flex;
     align-items: center;
+    input[type=checkbox] {
+      margin-right: 0.6em;
+    }
 
     &::before {
       content: "";
     }
-  }
-
-  .task-list-item-checkbox {
-    margin-right: 0.6em;
   }
 
   hr + * {

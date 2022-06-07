@@ -1,20 +1,14 @@
 const config = {
   gatsby: {
     pathPrefix: '/',
-    siteUrl: 'https://hasura.io',
+    siteUrl: 'https://gatsbyjustdocs.underlost.net',
     gaTrackingId: null,
     trailingSlash: false,
   },
   header: {
     logo: 'https://graphql-engine-cdn.hasura.io/learn-hasura/assets/homepage/brand.svg',
-    logoLink: 'https://hasura.io/learn/',
-    title:
-      "<a href='https://hasura.io/learn/'><img class='img-responsive' src='https://graphql-engine-cdn.hasura.io/learn-hasura/assets/homepage/learn-logo.svg' alt='Learn logo' /></a>",
-    githubUrl: 'https://github.com/hasura/gatsby-gitbook-boilerplate',
-    helpUrl: '',
-    tweetText: '',
-    social: ``,
-    links: [{ text: '', link: '' }],
+    logoLink: '/',
+    title: 'Gatsby Just Docs',
     search: {
       enabled: true,
       indexName: 'docs_boredable',
@@ -29,7 +23,6 @@ const config = {
     links: [{ text: 'underlost', link: 'https://underlost.net' }],
     frontline: false,
     ignoreIndex: false,
-    title: 'gatsby Just Docs',
   },
   siteMetadata: {
     title: 'Gatsby Just Docs',

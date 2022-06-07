@@ -1,0 +1,47 @@
+---
+title: "Configuration"
+metaTitle: "Configuration"
+metaDescription: "Gatsby Just Docs has a number of configuration options."
+nav_order: 2
+show_toc: false
+---
+
+Configuration settings can be set in `config.js` with a few other settings in `gatsby-config.js`. 
+
+## Gatsby
+
+`pathPrefix` Some sites are hosted elsewhere than root. Update this to include the directory Gatsby Just Docs is hosted in.
+
+`siteUrl`: The full path of the live site.
+
+`gaTrackingId`: Optional Google tracking ID.
+
+`trailingSlash`: Force trailing slash at the end of urls.
+
+## Header
+
+`Logo`: Set an optional image to replace the header text. Also used for metadata.
+
+`LogoLink` Set the URl of the logo image.
+
+### Search 
+
+Within the header configuration, there are several fields for API keys for search, powered by Algolia. By registering for a free account and aquire the needed API keys. 
+
+## Sidebar
+
+`forcedNavOrder` Specify the order of the links generated through MDX files. This overrides the `nav_order` frontmatter values.
+
+`collapsedNav` Force Navigation items to stay closed, even if they have child elements.
+
+`links`: Define additional links to appear, that arent generated from the MDX files.
+
+`ignoreIndex`: Hide the homepage from the Navigation list. 
+
+## Site Meta
+
+These settings are all pretty self-explaanitory, controlling meta tags, and favicon. Useful for sharing links to social media.
+
+## PWA Settings
+
+Gatsby PWA settings. Refer to [Gatsby settings](https://www.gatsbyjs.com/docs/progressive-web-app/) for more detailed information if you'll want to enable this.

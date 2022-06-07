@@ -21,9 +21,7 @@ const SidebarLayout = ({ location }) => (
     `}
     render={({ allMdx }) => {
       return (
-        <nav role="navigation" aria-label="Main" id="site-nav" className="site-nav">
-          <Tree edges={allMdx.edges} />
-        </nav>
+        <Tree edges={allMdx.edges} />
       );
     }}
   />

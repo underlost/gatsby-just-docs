@@ -9,79 +9,68 @@ nav_order: 2
 
 ### Links that look like buttons
 
-<div class="code-example" markdown="1">
-[Link button](http://example.com/){: .btn }
+<Button className="btn" href="http://example.com/">Link Button</Button>
+<br />
+<Button className="btn btn-purple" href="http://example.com/">Link Button</Button>
+<Button className="btn btn-blue" href="http://example.com/">Link Button</Button>
+<Button className="btn btn-green" href="http://example.com/">Link Button</Button>
+<br />
+<Button className="btn btn-outline" href="http://example.com/">Link Button</Button>
 
-[Link button](http://example.com/){: .btn .btn-purple }
-[Link button](http://example.com/){: .btn .btn-blue }
-[Link button](http://example.com/){: .btn .btn-green }
-
-[Link button](http://example.com/){: .btn .btn-outline }
-</div>
 ```markdown
-[Link button](http://example.com/){: .btn }
+<Button className="btn" href="http://example.com/">Link Button</Button>
 
-[Link button](http://example.com/){: .btn .btn-purple }
-[Link button](http://example.com/){: .btn .btn-blue }
-[Link button](http://example.com/){: .btn .btn-green }
+<Button className="btn btn-purple" href="http://example.com/">Link Button</Button>
+<Button className="btn btn-blue" href="http://example.com/">Link Button</Button>
+<Button className="btn btn-green" href="http://example.com/">Link Button</Button>
 
-[Link button](http://example.com/){: .btn .btn-outline }
+<Button className="btn btn-outline" href="http://example.com/">Link Button</Button>
 ```
 
-### Button element
-
-GitHub Flavored Markdown does not support the `button` element, so you'll have to use inline HTML for this:
-
-<div class="code-example">
-<button type="button" name="button" class="btn">Button element</button>
-</div>
-
-```html
-<button type="button" name="button" class="btn">Button element</button>
-```
-
----
+***
 
 ## Using utilities with buttons
 
 ### Button size
 
-Wrap the button in a container that uses the [font-size utility classes]({{ site.baseurl }}{% link docs/utilities/typography.md %}) to scale buttons:
+Wrap the button in a container that uses the [font-size utility classes](/utilities/typography) to scale buttons:
 
-<div class="code-example" markdown="1">
 <span class="fs-6">
-[Big ass button](http://example.com/){: .btn }
+<Button className="btn" href="http://example.com/">Big Button</Button>
 </span>
 
 <span class="fs-3">
-[Tiny ass button](http://example.com/){: .btn }
+<Button className="btn" href="http://example.com/">Tiny Button</Button>
 </span>
-</div>
+
 ```markdown
 <span class="fs-8">
-[Link button](http://example.com/){: .btn }
+<Button className="btn" href="http://example.com/">Big Button</Button>
 </span>
 
 <span class="fs-3">
-[Tiny ass button](http://example.com/){: .btn }
+<Button className="btn" href="http://example.com/">Tiny Button</Button>
 </span>
 ```
 
 ### Spacing between buttons
 
-Use the [margin utility classes]({{ site.baseurl }}{% link docs/utilities/layout.md %}#spacing) to add spacing between two buttons in the same block.
+Use the [margin utility classes](/utilities/layout/) to add spacing between two buttons in the same block.
 
-<div class="code-example" markdown="1">
-[Button with space](http://example.com/){: .btn .btn-purple .mr-2 }
-[Button ](http://example.com/){: .btn .btn-blue .mr-2 }
 
-[Button with more space](http://example.com/){: .btn .btn-green .mr-4 }
-[Button ](http://example.com/){: .btn .btn-blue }
-</div>
+<Button className="btn btn-purple mr-2" href="http://example.com/">Button with space</Button>
+<Button className="btn btn-blue mr-2" href="http://example.com/">Button</Button>
+
+***
+
+<Button className="btn btn-green mr-4" href="http://example.com/">Button with more space</Button>
+<Button className="btn btn-blue" href="http://example.com/">Button</Button>
+
+
 ```markdown
-[Button with space](http://example.com/){: .btn .btn-purple .mr-2 }
-[Button ](http://example.com/){: .btn .btn-blue }
+<Button className="btn btn-purple mr-2" href="http://example.com/">Button with space</Button>
+<Button className="btn btn-blue mr-2" href="http://example.com/">Button</Button>
 
-[Button with more space](http://example.com/){: .btn .btn-green .mr-4 }
-[Button ](http://example.com/){: .btn .btn-blue }
+<Button className="btn btn-green mr-4" href="http://example.com/">Button with more space</Button>
+<Button className="btn btn-blue" href="http://example.com/">Button</Button>
 ```

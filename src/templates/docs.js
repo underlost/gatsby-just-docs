@@ -123,7 +123,7 @@ export default class MDXRuntimeTest extends Component {
 
             <p className="text-small text-grey-dk-100 mb-0">
               Copyright © 2022 Tyler Rilling. Distributed by an{' '}
-              <a href="https://github.com/underlost/gatsby-just-the-docs/tree/main/LICENSE.txt">
+              <a href="https://github.com/underlost/gatsby-just-the-docs/tree/master/LICENSE">
                 MIT license
               </a>
               .

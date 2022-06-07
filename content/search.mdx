@@ -1,0 +1,26 @@
+---
+title: "Search"
+metaTitle: "Search"
+metaDescription: "Gatsby Just Docs has optional search, powered by Algolia"
+nav_order: 3
+show_toc: false
+---
+
+Gatsby Just Docs is powered by Algolia to add client side search powered by a JSON index that Gatsby generates on *build*. Search results are shown in an auto complete dropdown. There is no search page. By default, all search results are indexed using the following data points:
+
+- title
+- MetaTitle
+- MetaDescription
+
+## Enabling search
+
+Search can be enabled by supplying Algolia APi credentials in the `config.js` file. Refer to the [configuration](/configuration/) for more details.
+
+## Generating search results
+
+Search results are generated on the Gatsby build command.
+
+## Hiding pages from search
+
+Currently all MDX files will be indexed and fully searchable. Allowing pages to be flagged as not indexed is a planned feature for the future.
+

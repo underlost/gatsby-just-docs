@@ -25,16 +25,9 @@ Lorem ipsum dolor sit amet, `<inline code snippet>` adipisicing elit, sed do eiu
 
 ## Syntax highlighted code blocks
 
-Use Jekyll's built-in syntax highlighting with Rouge for code blocks by using three backticks, followed by the language name:
+Use Prism's syntax highlighting for code blocks by using three backticks, followed by the language name, then the block of code, followed by three more backticks:
 
-
-```js
-// Javascript code with syntax highlighting.
-var fun = function lang(l) {
-  dateformat.i18n = require('./lang/' + l)
-  return true;
-}
-```
+` ```js `
 
 ```js
 // Javascript code with syntax highlighting.
@@ -44,24 +37,4 @@ var fun = function lang(l) {
 }
 ```
 
-----
 
-## Code blocks with rendered examples
-
-To demonstrate front end code, sometimes it's useful to show a rendered example of that code. After including the styles from your project that you'll need to show the rendering, you can use a `<div>` with the `code-example` class, followed by the code block syntax. If you want to render your output with Markdown instead of HTML, use the `markdown="1"` attribute to tell Jekyll that the code you are rendering will be in Markdown format... This is about to get meta...
-
-
-[Link button](http://example.com/)
-
-
-```markdown
-[Link button](http://example.com/)
-```
-
-
-[Link button](http://example.com/)
-
-
-```markdown
-[Link button](http://example.com/)
-```
