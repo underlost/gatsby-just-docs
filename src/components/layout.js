@@ -6,7 +6,7 @@ import mdxComponents from './mdxComponents';
 import Sidebar from './sidebar';
 import config from '../../config.js';
 import Header from './Header';
-import SvgElements from './svgElements';
+import SvgElements from './SvgElements';
 import { ListItem } from './styles/Sidebar';
 
 const Layout = ({ children, location }) => {
