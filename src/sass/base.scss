@@ -9,7 +9,7 @@
 
 ::selection {
   color: $white;
-  background: $link-color;
+  background: var(--color-link);
 }
 
 html {
@@ -21,8 +21,8 @@ body {
   font-family: $body-font-family;
   font-size: inherit;
   line-height: $body-line-height;
-  color: $body-text-color;
-  background-color: $body-background-color;
+  color: var(--color-body-text);
+  background-color: var(--color-body-background);
 }
 
 ol,
@@ -50,7 +50,7 @@ h6 {
   margin-bottom: 1em;
   font-weight: 500;
   line-height: $body-heading-line-height;
-  color: $body-heading-color;
+  color: var(--color-body-heading);
 }
 
 p {
@@ -59,7 +59,7 @@ p {
 }
 
 a {
-  color: $link-color;
+  color: var(--color-link);
   text-decoration: none;
 }
 
@@ -72,8 +72,8 @@ a:not([class]) {
 
   &:hover {
     background-image: linear-gradient(
-      rgba($link-color, 0.45) 0%,
-      rgba($link-color, 0.45) 100%
+      rgba(var(--color-link), 0.45) 0%,
+      rgba(var(--color-link), 0.45) 100%
     );
     background-size: 1px 1px;
   }
@@ -103,6 +103,6 @@ hr {
   height: 1px;
   padding: 0;
   margin: $sp-6 0;
-  background-color: $border-color;
+  background-color: var(--color-border);
   border: 0;
 }

@@ -4,6 +4,17 @@ import config from '../config';
 
 export default class HTML extends React.Component {
   render() {
+    const setInitialTheme = `
+    function getUserPreference() {
+      if(window.localStorage.getItem('theme')) {
+        return window.localStorage.getItem('theme')
+      }
+      return window.matchMedia('(prefers-color-scheme: dark)').matches
+                ? 'dark'
+                : 'light'
+    }
+    document.body.dataset.theme = getUserPreference();
+    `;
     return (
       <html {...this.props.htmlAttributes} lang="en">
         <head>
@@ -24,6 +35,8 @@ export default class HTML extends React.Component {
           {this.props.headComponents}
         </head>
         <body {...this.props.bodyAttributes}>
+          <script dangerouslySetInnerHTML={{ __html: setInitialTheme }} />
+          
           {this.props.preBodyComponents}
           <div key={`body`} id="___gatsby" dangerouslySetInnerHTML={{ __html: this.props.body }} />
           {this.props.postBodyComponents}

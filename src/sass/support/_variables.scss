@@ -70,20 +70,43 @@ $red-100: #f96e65 !default;
 $red-200: #e94c4c !default;
 $red-300: #dd2e2e !default;
 
-$body-background-color: $white !default;
-$sidebar-color: $grey-lt-000 !default;
-$search-background-color: $white !default;
-$table-background-color: $white !default;
-$code-background-color: $grey-lt-000 !default;
-$feedback-color: darken($sidebar-color, 3%) !default;
 
-$body-text-color: $grey-dk-100 !default;
-$body-heading-color: $grey-dk-300 !default;
-$search-result-preview-color: $grey-dk-000 !default;
-$nav-child-link-color: $grey-dk-100 !default;
-$link-color: $purple-000 !default;
-$btn-primary-color: $purple-100 !default;
-$base-button-color: #f7f7f7 !default;
+body,
+body[data-theme="light"] {
+  --color-body-background: #{$white};
+  --color-sidebar: #{$grey-lt-000};
+  --color-search-background: #{$white};
+  --color-table-background: #{$white};
+  --color-code-background: #{$grey-lt-000};
+  --color-feedback: #{darken($grey-lt-000, 3%)};
+  --color-body-text: #{$grey-dk-100};
+  --color-body-heading: #{$grey-dk-300};
+  --color-search-result-preview: #{$grey-dk-000};
+  --color-nav-child-link: #{$grey-dk-100};
+  --color-link: #{$purple-000};
+  --color-btn-primary: #{$purple-100};
+  --color-base-button: #{#f7f7f7};
+  --color-bg-toggle: #1e90ff;
+  --color-border: #{$grey-lt-300};
+}
+
+body[data-theme="dark"] {
+  --color-body-background: #16161D;
+  --color-sidebar: #16161C;
+  --color-search-background: #{$grey-dk-250};
+  --color-table-background: #{$grey-dk-250};
+  --color-code-background: #{$grey-dk-250};
+  --color-feedback: #{darken($grey-dk-300, 3%)};
+  --color-body-text: #b3ace3;
+  --color-body-heading: #{$grey-lt-000};
+  --color-search-result-preview: #{$grey-dk-000};
+  --color-nav-child-link: #{$grey-dk-000};
+  --color-link: #9782ff;;
+  --color-btn-primary: #{$blue-200};
+  --color-base-button: #{$grey-dk-250};
+  --color-bg-toggle: #{lighten(#16161D, 15%)};
+  --color-border: #{lighten(#16161D, 15%)};
+}
 
 //
 // Spacing

@@ -15,8 +15,7 @@ const Popover = css`
   box-shadow: 0 0 5px 0;
   padding: 1em;
   border-radius: 2px;
-  background-color: white;
-  background: ${({ theme }) => theme.background};
+  background-color: var(--color-sidebar);
 `;
 
 export default styled(SearchResult)`
@@ -34,7 +33,6 @@ export default styled(SearchResult)`
     li.ais-Hits-item {
       margin-bottom: 1em;
       a {
-        color: ${({ theme }) => theme.foreground};
         h4 {
           margin-bottom: 0.2em;
         }

@@ -53,9 +53,9 @@
       &.active {
         background-image: linear-gradient(
           -90deg,
-          rgba($feedback-color, 1) 0%,
-          rgba($feedback-color, 0.8) 80%,
-          rgba($feedback-color, 0) 100%
+          rgba(var(--color-feedback), 1) 0%,
+          rgba(var(--color-feedback), 0.8) 80%,
+          rgba(var(--color-feedback), 0) 100%
         );
       }
     }
@@ -71,7 +71,7 @@
       padding-right: calc($nav-list-item-height-sm / 4);
       padding-bottom: calc($nav-list-item-height-sm / 4);
       padding-left: calc($nav-list-item-height-sm / 4);
-      color: $link-color;
+      color: var(--color-link);
 
       @include mq(md) {
         width: $nav-list-item-height;
@@ -85,8 +85,8 @@
       &:hover {
         background-image: linear-gradient(
           -90deg,
-          rgba($feedback-color, 1) 0%,
-          rgba($feedback-color, 0.8) 100%
+          rgba(var(--color-feedback), 1) 0%,
+          rgba(var(--color-feedback), 0.8) 100%
         );
       }
 
@@ -106,11 +106,11 @@
         position: relative;
 
         .nav-list-link {
-          color: $nav-child-link-color;
+          color: var(--color-nav-child-link);
         }
 
         .nav-list-expander {
-          color: $nav-child-link-color;
+          color: var(--color-nav-child-link);
         }
       }
     }

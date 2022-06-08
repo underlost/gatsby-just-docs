@@ -48,7 +48,8 @@
   padding-bottom: $sp-2;
   padding-left: #{$gutter-spacing-sm + $sp-5};
   font-size: 16px;
-  background-color: $search-background-color;
+  background-color: var(--color-search-background);
+  color: var(--color-body-text);
   border-top: 0;
   border-right: 0;
   border-bottom: 0;
@@ -60,7 +61,7 @@
     padding-bottom: $gutter-spacing-sm;
     padding-left: #{$gutter-spacing + $sp-5};
     font-size: 14px;
-    background-color: $body-background-color;
+    background-color: var(--color-body-background);
     transition: padding-left linear calc($transition-duration / 2);
   }
 
@@ -68,7 +69,7 @@
     outline: 0;
 
     + .search-label .search-icon {
-      color: $link-color;
+      color: var(--color-link);
     }
   }
 }
@@ -99,7 +100,7 @@
   width: 100%;
   max-height: calc(100% - #{$sp-10});
   overflow-y: auto;
-  background-color: $search-background-color;
+  background-color: var(--color-search-background);
   border-bottom-right-radius: $border-radius;
   border-bottom-left-radius: $border-radius;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12), 0 3px 10px rgba(0, 0, 0, 0.08);
@@ -136,7 +137,7 @@
 
   &:hover,
   &.active {
-    background-color: $feedback-color;
+    background-color: var(--color-feedback);
   }
 }
 
@@ -171,7 +172,7 @@
     width: $sp-4;
     height: $sp-4;
     margin-right: $sp-2;
-    color: $link-color;
+    color: var(--color-link);
     flex-shrink: 0;
   }
 
@@ -189,7 +190,7 @@
   display: block;
   margin-left: #{$sp-4 + $sp-2};
   overflow: hidden;
-  color: $search-result-preview-color;
+  color: var(--color-search-result-preview);
   text-overflow: ellipsis;
   white-space: nowrap;
   @include fs-1;
@@ -201,7 +202,7 @@
   padding-bottom: $sp-2;
   padding-left: $sp-4;
   margin-left: $sp-2;
-  color: $search-result-preview-color;
+  color: var(--color-search-result-preview);
   word-wrap: break-word;
   border-left: $border;
   border-left-color: $border-color;
@@ -239,8 +240,8 @@
   display: flex;
   width: $sp-9;
   height: $sp-9;
-  background-color: $search-background-color;
-  border: 1px solid rgba($link-color, 0.3);
+  background-color: var(--color-search-background);
+  border: 1px solid rgba(var(--color-link), 0.3);
   border-radius: #{calc($sp-9 / 2)};
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12), 0 3px 10px rgba(0, 0, 0, 0.08);
   align-items: center;
@@ -281,7 +282,7 @@
   }
 
   .search-input {
-    background-color: $search-background-color;
+    background-color: var(--color-search-background);
 
     @include mq(md) {
       padding-left: 2.3rem;

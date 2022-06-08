@@ -6,7 +6,7 @@
   z-index: 0;
   display: flex;
   flex-wrap: wrap;
-  background-color: $sidebar-color;
+  background-color: var(--color-sidebar);
 
   @include mq(md) {
     flex-wrap: nowrap;
@@ -14,7 +14,8 @@
     width: $nav-width-md;
     height: 100%;
     flex-direction: column;
-    border-right: $border $border-color;
+    border-right: $border;
+    border-right-color: var(--color-border);
     align-items: flex-end;
   }
 
@@ -52,14 +53,15 @@
 .main-header {
   z-index: 0;
   display: none;
-  background-color: $sidebar-color;
+  background-color: var(--color-sidebar);
 
   @include mq(md) {
     display: flex;
     justify-content: space-between;
     height: $header-height;
-    background-color: $body-background-color;
-    border-bottom: $border $border-color;
+    background-color: var(--color-body-background);
+    border-bottom: $border;
+    border-bottom-color: var(--color-border);
   }
 
   &.nav-open {
@@ -105,7 +107,8 @@
   @include mq(md) {
     height: $header-height;
     max-height: $header-height;
-    border-bottom: $border $border-color;
+    border-bottom: $border;
+    border-bottom-color: var(--color-border);
   }
 }
 
@@ -117,7 +120,7 @@
   align-items: center;
   padding-top: $sp-3;
   padding-bottom: $sp-3;
-  color: $body-heading-color;
+  color: var(--color-body-heading);
   @include fs-6;
 
   @include mq(md) {
@@ -155,17 +158,17 @@
 .site-title:hover {
   background-image: linear-gradient(
     -90deg,
-    rgba($feedback-color, 1) 0%,
-    rgba($feedback-color, 0.8) 80%,
-    rgba($feedback-color, 0) 100%
+    rgba(var(--color-feedback), 1) 0%,
+    rgba(var(--color-feedback), 0.8) 80%,
+    rgba(var(--color-feedback), 0) 100%
   );
 }
 
 .site-button:hover {
   background-image: linear-gradient(
     -90deg,
-    rgba($feedback-color, 1) 0%,
-    rgba($feedback-color, 0.8) 100%
+    rgba(var(--color-feedback), 1) 0%,
+    rgba(var(--color-feedback), 0.8) 100%
   );
 }
 
@@ -203,5 +206,5 @@ body {
 .icon {
   width: $sp-5;
   height: $sp-5;
-  color: $link-color;
+  color: var(--color-link);
 }

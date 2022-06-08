@@ -5,7 +5,7 @@ import isAbsoluteUrl from 'is-absolute-url';
 const CodeExample = ({ children }) => {
   if (children) {
     return (
-      <div class="code-example">
+      <div className="code-example">
         {children}
       </div>
     );

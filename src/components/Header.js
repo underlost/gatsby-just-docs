@@ -1,12 +1,9 @@
 import * as React from 'react';
-import styled from '@emotion/styled';
 import { StaticQuery, graphql } from 'gatsby';
-import Link from './link';
 import Loadable from 'react-loadable';
 import config from '../../config.js';
 import LoadingProvider from './mdxComponents/loading';
-import { DarkModeSwitch } from './DarkModeSwitch';
-
+import ThemeToggle from './ThemeToggle.js';
 const isSearchEnabled = config.header.search && config.header.search.enabled ? true : false;
 
 let searchIndices = [];
@@ -34,20 +31,7 @@ function myFunction() {
   }
 }
 
-const StyledBgDiv = styled('div')`
-  height: 60px;
-  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
-  background-color: #f8f8f8;
-  position: relative;
-  display: none;
-  background: ${(props) => (props.isDarkThemeActive ? '#001932' : undefined)};
-
-  @media (max-width: 767px) {
-    display: block;
-  }
-`;
-
-const Header = ({ location, isDarkThemeActive, toggleActiveTheme }) => (
+const Header = ({ location }) => (
   <StaticQuery
     query={graphql`
       query headerTitleQuery {
@@ -66,12 +50,9 @@ const Header = ({ location, isDarkThemeActive, toggleActiveTheme }) => (
 
       return (
         <div id="main-header" className="main-header">
-          
-          {isSearchEnabled ? (
-            <LoadableComponent collapse={true} indices={searchIndices} />
-          ) : null}
+          {isSearchEnabled ? <LoadableComponent collapse={true} indices={searchIndices} /> : null}
 
-          <StyledBgDiv isDarkThemeActive={isDarkThemeActive}>
+          <>
             <div className={'navBarDefault removePadd'}>
               <span
                 onClick={myFunction}
@@ -90,7 +71,10 @@ const Header = ({ location, isDarkThemeActive, toggleActiveTheme }) => (
                 <LoadableComponent collapse={true} indices={searchIndices} />
               </div>
             ) : null}
-          </StyledBgDiv>
+          </>
+          <nav aria-label="Auxiliary" className="aux-nav pt-3">
+            <ThemeToggle />
+          </nav>
         </div>
       );
     }}

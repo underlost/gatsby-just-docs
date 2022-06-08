@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { MDXProvider } from '@mdx-js/react';
 
-import ThemeProvider from './theme/themeProvider';
 import mdxComponents from './mdxComponents';
 import Sidebar from './sidebar';
 import config from '../../config.js';
@@ -17,7 +16,7 @@ const Layout = ({ children, location }) => {
   };
 
   return (
-    <ThemeProvider location={location}>
+    <>
       <MDXProvider components={mdxComponents}>
         <SvgElements />
         <div>
@@ -37,8 +36,8 @@ const Layout = ({ children, location }) => {
                 </>
               )}
 
-              <button id="menu-button" class="site-button" onClick={toggleMenu}>
-                <svg viewBox="0 0 24 24" class="icon">
+              <button id="menu-button" className="site-button" onClick={toggleMenu}>
+                <svg viewBox="0 0 24 24" className="icon">
                   <use xlinkHref="#svg-menu"></use>
                 </svg>
               </button>
@@ -92,7 +91,7 @@ const Layout = ({ children, location }) => {
           </div>
         </div>
       </MDXProvider>
-    </ThemeProvider>
+    </>
   );
 };
 

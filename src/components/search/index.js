@@ -5,13 +5,7 @@ import StyledSearchBox from './styled-search-box';
 import StyledSearchResult from './styled-search-result';
 import StyledSearchRoot from './styled-search-root';
 import useClickOutside from './use-click-outside';
-import ThemeProvider from '../theme/themeProvider'
 
-const theme = {
-  foreground: '#050505',
-  background: 'white',
-  faded: '#888',
-};
 export default function Search({ indices }) {
   const rootRef = createRef();
   const [query, setQuery] = useState();
