@@ -1,8 +1,13 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/b676aa1b-eaea-49f8-9ec8-fe8446fc40e7/deploy-status)](https://app.netlify.com/sites/gatsby-just-docs/deploys)
 
-# Gatsby Just Docs
+<h1 align="center">
+  <br>
+    <img src="https://raw.githubusercontent.com/underlost/gatsby-just-docs/master/static/logo.png" alt="Gatsby Just Docs" width="260">
+  <br>
+  <br>
+</h1>
 
-A powerful MDX based authoring framework for building great documentation.
+<h4 align="center">A powerful MDX based authoring framework for building great documentation.</h4>
 
 ## Motivation
 
@@ -30,7 +35,7 @@ View the demo, and all of its features in the [live demo](https://gatsby-just-do
 
 Get started by running the following commands:
 
-```sh
+```shell
 git clone git@github.com:underlost/gatsby-just-docs.git
 cd gatsby-just-docs
 yarn install
