@@ -2,7 +2,7 @@
 
 <h1 align="center">
   <br>
-    <img src="https://raw.githubusercontent.com/underlost/gatsby-just-docs/master/static/logo.png" alt="Gatsby Just Docs" width="260">
+    <img src="https://raw.githubusercontent.com/underlost/gatsby-just-docs/master/static/images/logo.png" alt="Gatsby Just Docs" width="260">
   <br>
   <br>
 </h1>

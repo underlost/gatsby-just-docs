@@ -21,6 +21,13 @@ const plugins = [
     },
   },
   {
+    resolve: `gatsby-source-filesystem`,
+    options: {
+      path: `${__dirname}/static/images`,
+      name: `images`,
+    },
+  },
+  {
     resolve: `gatsby-plugin-sass`,
     options: {
       sassOptions: {

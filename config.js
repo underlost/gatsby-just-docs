@@ -6,7 +6,7 @@ const config = {
     trailingSlash: false,
   },
   header: {
-    logo: 'https://graphql-engine-cdn.hasura.io/learn-hasura/assets/homepage/brand.svg',
+    logo: '/static/images/favicon.png',
     logoLink: '/',
     title: 'Gatsby Just Docs',
     tweetText: 'Gatsby Just Docs',
@@ -27,10 +27,10 @@ const config = {
   },
   siteMetadata: {
     title: 'Gatsby Just Docs',
-    description: 'Documentation built with MDX. Powering docs.boredable.com ',
-    ogImage: null,
+    description: 'Documentation built with MDX.',
+    ogImage: '/images/ogImage.jpg',
     docsLocation: 'https://github.com/underlost/gatsby-just-the-docs/tree/master/content',
-    favicon: 'https://graphql-engine-cdn.hasura.io/img/hasura_icon_black.svg',
+    favicon: '/images/favicon.png',
   },
   pwa: {
     enabled: false, // disabling this will also remove the existing service worker.
@@ -44,7 +44,7 @@ const config = {
       crossOrigin: 'use-credentials',
       icons: [
         {
-          src: 'src/pwa-512.png',
+          src: 'static/images/favicon.png',
           sizes: `512x512`,
           type: `image/png`,
         },
